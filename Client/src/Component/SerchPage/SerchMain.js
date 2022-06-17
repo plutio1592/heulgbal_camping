@@ -8,12 +8,16 @@ const Main = () => {
     window.location.href = "/"
   }
 
+  const profileClick = (e) => {
+    window.location.href = "/serch"
+  }
+
   return (
   <div>
     <div className='serchmain-border'>
         <button className='serchmain-main-button serchmain-text serchmain-button' onClick={mainClick}>흙발캠핑</button>
         <button className='serchmain-serch-button serchmain-text serchmain-button' >검색</button>
-        <button className='serchmain-profile-button serchmain-text serchmain-button' >프로필</button>
+        <button className='serchmain-profile-button serchmain-text serchmain-button' onClick={profileClick}>프로필</button>
       </div>
       <div className='serchmain-mainbox'>
     <span className='serchmain-sidebar'>

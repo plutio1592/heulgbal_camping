@@ -1,3 +1,7 @@
+html {
+  background-color: #f5f5f5;
+}
+
 .guide-button {
   border-color: bisque;
   background-color: bisque;
@@ -44,4 +48,11 @@
 .guide-area {
   margin: 5em 2em;
   border: 2px solid bisque;
+}
+
+.guide-input-text {
+  text-shadow: none;
+  font-size: 1.2em;
+  color: black;
+  margin-top: 0.5em;
 }
