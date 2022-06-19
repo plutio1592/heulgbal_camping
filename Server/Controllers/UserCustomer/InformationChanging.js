@@ -1,5 +1,5 @@
 // 완료 but, CLI 에서 오류 나옴. 정보 변경은 됨
-const { Users } = require('../../models');
+const { user } = require('../../models');
 const { isAuthorized,
         generateAccessToken,
         sendAccessToken } = require('../TokenFunction');
@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     res.status(401).send('someting is not authorized');
   };
 
-  // await Users.update({
+  // await user.update({
   //   name, 
   //   phone,
   //   email
@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
   //   res.status(201);
   // });
 
-  const info = await Users.findOne({
+  const info = await user.findOne({
     where: {
       customer_id: userInfo.customer_id
     }

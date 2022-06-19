@@ -1,5 +1,5 @@
 // 완료
-const { Users } = require('../../models');
+const { user } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
     res.sendStatus(404);
   };
   // 해당 유저의 계정 삭제
-  await Users.destroy({
+  await user.destroy({
     where: { id }
   })
   .then (() => {

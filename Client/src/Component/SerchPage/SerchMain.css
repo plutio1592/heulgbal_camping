@@ -1,57 +1,91 @@
-/* .serchmain-main-button {
+.serch-mainb {
   width: auto;
   height: auto;
-  font-size: 3em;
-  text-align: center;
-}
-
-.serchmain-serch-button {
-  width: auto;
-  height: auto;
-  font-size: 3em;
-  margin-left: 20em;
-}
-
-.serchmain-profile-button {
-  width: auto;
-  height: auto;
-  font-size: 3em;
-  margin-left: 2em;
-}
-
-.serchmain-border {
-  border: 2px solid bisque;
-  padding: 1em;
-}
-
-.serchmain-mainbox {
-  margin: 10em 0em 0em 0em ;
-  border: 2px solid bisque;
+  font-size: 3.5em;
+  border: white;
   background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
 }
 
-.serchmain-sidebar {
-  display: flex;
-  width: 20em;
-  margin-top: 0em;
-  flex-direction: column
+.serch-isIcon {
+  margin: 1em 0em 0em 0em;
+  width: 3.5em;
+  /* margin-left: 4em; */
 }
 
-.serchmain-sidebutton {
-  height: 3em;
-  font-size: 1.5em;
-  margin: 1.4em;
-}
-
-.setInput {
-  padding-top: 0.3rem;
-  font-size: 1.2rem;
-  width: 99%;
-  outline: none;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0.5px;
-  margin: 0.5em 0em 2em 0em ;
-  border-color: rgba(0, 0, 0, 0.1);
+/* .serchb {
+  margin-left: 8.5em;
+  margin-right: 1.5em;
+  width: auto;
+  height: auto;
+  font-size: 3em;
 } */
+
+/* .border {
+} */
+
+.serch-profileb {
+  width: 3em;
+  margin-left: 24em;
+  margin-right: 0em;
+}
+
+.serch-benner {
+  margin: 2em 10em 10em 10em;
+  height: 32.4em;
+}
+
+.serch-test {
+  border : 2px solid yellowgreen;
+  width: 70em;
+  display:inline-block;
+  margin: 1.5em;
+}
+
+.serch-img {
+  float: left;
+  border: 2px solid blue;
+  width: 16em;
+  height: 9em;
+}
+
+.serch-right-text {
+  flex: right;
+  float: right;
+  margin: 1em;
+}
+
+.serch-right-inner-text {
+  margin: 1em 0em;
+}
+
+.serch-center-text {
+  float: left;
+  text-align: left;
+  margin: 1em;
+}
+
+.serch-center-inner-text {
+  margin: 1em 0em;
+}
+
+.serch-inner-img {
+  width: 70em;
+  float: left;
+}
+
+.serch-test-button1 {
+  width: 70em;
+  height: 6em;
+}
+
+.serch-test-button2 {
+  width: 10em;
+  height: 6em;
+  margin: 0em 0em 1em 5em;
+}
+
+.container {
+
+}

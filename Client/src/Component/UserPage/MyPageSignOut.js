@@ -8,7 +8,7 @@ import MyModal from '../Model/ProFileModel';
 const First = styled.div`
   left: 50%;
   right: 50%;
-  width: 118em;
+  width: 110em;
   height: auto;
   position: absolute;
   /* background-color: white; */

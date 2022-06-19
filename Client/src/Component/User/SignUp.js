@@ -213,8 +213,6 @@ export function Login ({ handleResponseSuccess }) {
   }
 }
 
-
-
   return (
     <>
     <Wallpaper>

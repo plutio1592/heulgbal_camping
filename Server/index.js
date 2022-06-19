@@ -4,6 +4,10 @@ const https = require('https');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const express = require('express');
+<<<<<<< HEAD
+=======
+const { sequelize } = require('./models');
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
 
 const app = express();
 
@@ -11,12 +15,28 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
+<<<<<<< HEAD
     origin: ['http://localhost:3000'],
+=======
+    origin: ['http://localhost:3000', 'https://heulgbalcamping.com'],
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
 );
 
+<<<<<<< HEAD
+=======
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log('데이터베이스 연결됨.');
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
@@ -32,13 +52,21 @@ app.get('/user', (req, res) => {
 
 const UserBusinessRouter  = require('./Routes/UserBusiness');
 const UserCustomerRouter = require('./Routes/UserCustomer');
+<<<<<<< HEAD
 // const CampsitesRouter = require('./Routes/Campsites);
+=======
+const CampsitesRouter = require('./Routes/Campsites');
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
 
 // express use routers
 
 app.use('/business', UserBusinessRouter);
 app.use('/user', UserCustomerRouter);
+<<<<<<< HEAD
 // app.use('/campsites', CampsitesRouter);
+=======
+app.use('/campsites', CampsitesRouter);
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
 
 // app.use()
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Main from './Component/Pages/Main'
+import Main from './Component/Pages/Main';
 import Login from './Component/User/Login';
 import SignUp from './Component/User/SignUp';
 import SerchMain from './Component/SerchPage/SerchMain';
@@ -12,6 +12,7 @@ import BusinessPage from './Component/BusinessPage/BusinessPage'
 import BusinessCampSite from './Component/BusinessPage/BusinessPageCampSite'
 import BusinessPageSignOut from './Component/BusinessPage/BusinessPageSignOut'
 import QnApage from './Component/Pages/QnAPage'
+import ReservationSuccess from './Component/SerchPage/ReservationComplete'
 // import button from './Component/User/button'
 // import SignIn from './Component/User/SignIn';
 
@@ -24,6 +25,7 @@ const App = () => {
             <section className="features">
               <Routes>
                 <Route exact path="/" element={<Main />} />
+                {/* <Route exact path="/" element={<SerchMain />} /> */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/serch" element={<SerchMain />} />
@@ -36,7 +38,7 @@ const App = () => {
                 <Route path="/businessout" element={<BusinessPageSignOut />} />
                 <Route path="/businessout" element={<BusinessPageSignOut />} />
                 <Route path="/qnapage" element={<QnApage />} />
-
+                <Route path="/servationsuccess" element={<ReservationSuccess />} />
               </Routes>
             </section>
           </main> 

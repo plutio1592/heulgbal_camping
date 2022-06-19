@@ -1,6 +1,6 @@
 // 완료
 
-const { Users } = require('../../models');
+const { user } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
   if (!userInfo) {
     res.status(401).send('password is not authorized');
   };
-  const info = await Users.findOne({
+  const info = await user.findOne({
     where:{
       customer_id: userInfo.customer_id
     }

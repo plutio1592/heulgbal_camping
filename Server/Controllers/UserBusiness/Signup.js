@@ -1,4 +1,4 @@
-const { Users } = require('../../models');
+const { user } = require('../../models');
 const { generateAccessToken } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -24,8 +24,8 @@ module.exports = async (req, res) => {
   // // 비밀번호는 제외시키고 토큰에 정보 담아두기
   // delete userInfo.password;
   // const accessToken = generateAccessToken(userInfo.dataValues);
-  // return res.status(201).cookie('jwt', accessToken).json({message: 'ok'});  const userInfo = await Users.findOne({
-  const userInfo = await Users.findOne({  
+  // return res.status(201).cookie('jwt', accessToken).json({message: 'ok'});  const userInfo = await user.findOne({
+  const userInfo = await user.findOne({  
     where: {
         business_number
       },
@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
       res.status(409).send('already exists')
     } else {
       //res.status(200).send('created!')
-      Users.create({
+      user.create({
         customer_id : null, password: password, 
         email: email, name : name, phone : phone,
         business_number: business_number,

@@ -12,7 +12,7 @@ const Main = () => {
   <div>
     <div className='reservation-border'>
         <button className='reservation-main-button' onClick={mainClick}>흙발캠핑</button>
-        {/* <button className='reservation-serch-button' >검색</button> */}
+        <button className='reservation-serch-button' >검색</button>
         <button className='reservation-profile-button' >프로필</button>
       </div>
       <div className='reservation-mainbox'>

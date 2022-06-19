@@ -1,7 +1,7 @@
 // CLI 창에서는 'ERR_HTTP_HEADERS_SENT' 오류 발생하지만
 // 정보 변경은 정상적으로 이루어짐
 
-const { Users } = require('../../models');
+const { user } = require('../../models');
 const { isAuthorized,
   generateAccessToken,
   sendAccessToken } = require('../TokenFunction');
@@ -29,7 +29,11 @@ module.exports = async (req, res) => {
   // ).then(() => {
   //   res.status(201);
   // });
+<<<<<<< HEAD
   const info = await Users.findOne({
+=======
+  const info = await user.findOne({
+>>>>>>> bb557763192a6ccc8aa29bd7d778f24d54ff2578
     where: {
       business_number: userInfo.business_number
     }

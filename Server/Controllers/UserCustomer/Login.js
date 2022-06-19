@@ -8,12 +8,12 @@ const {
   sendRefreshToken,
 } = require('../TokenFunction');
 
-const { Users } = require('../../models');
+const { user } = require('../../models');
 
 module.exports = async (req, res) => {
   const { customer_id, password } = req.body;
   
-  const userInfo = await Users.findOne({where: {customer_id, password}});
+  const userInfo = await user.findOne({where: {customer_id, password}});
 
   // 입력받은 정보가 데이터베이스에 있는 정보와 일치 하지 않을 경우
   if (!userInfo) return res.status(401).send('id or password is not authorized')
